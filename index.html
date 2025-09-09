@@ -2,60 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cristian's Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cristian's Retro Projects</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #00ff00;
+      font-family: "Courier New", Courier, monospace;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .window {
+      border: 2px solid #00ff00;
+      padding: 20px;
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #f9f9f9;
-      color: #333;
+      margin: 30px auto;
+      background-color: #111;
     }
-    h1, h2 {
-      color: #1a73e8;
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #00ff00;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
     }
+
+    .menu a {
+      color: #00ff00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #00ff00;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 2em;
+    }
+
     ul {
-      list-style-type: none;
-      padding-left: 0;
+      list-style-type: square;
     }
-    li {
-      margin-bottom: 1rem;
-    }
+
     a {
-      color: #1a73e8;
+      color: #00ff00;
       text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #777;
+      margin-top: 40px;
+      font-size: 0.8em;
+      color: #0f0;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Hello, I'm Cristian!</h1>
-  <p>Welcome to my personal website where I share my coding projects. I'm passionate about building useful tools and learning new technologies.</p>
+  <div class="window">
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
 
-  <h2>My Projects</h2>
-  <ul>
-    <li>
-      <strong>Project 1:</strong> <a href="https://github.com/muscaicristian-ro/project1">Awesome Tool</a><br>
-      <em>A small app that helps with ...</em>
-    </li>
-    <li>
-      <strong>Project 2:</strong> <a href="https://github.com/muscaicristian-ro/project2">Weather Checker</a><br>
-      <em>A weather app built using HTML, CSS, and JavaScript</em>
-    </li>
-    <!-- Add more projects here -->
-  </ul>
+    <img src="your-image.jpg" alt="Your photo" class="profile-pic" />
 
-  <h2>Contact</h2>
-  <p>You can find me on <a href="https://github.com/muscaicristian-ro">GitHub</a> or email me at <a href="mailto:your@email.com">your@email.com</a></p>
+    <h1>Welcome, I'm Cristian</h1>
+    <p>This is my retro-styled developer portfolio. Inspired by the early days of programming with GW-BASIC, Pascal, and FoxPro.</p>
 
-  <footer>
-    <p>&copy; 2025 Cristian. Licensed under the <a href="LICENSE">MIT License</a>.</p>
-  </footer>
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://github.com/muscaicristian-ro/project1">Project 1</a> - Classic terminal app</li>
+      <li><a href="https://github.com/muscaicristian-ro/project2">Project 2</a> - Weather checker in DOS style</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+
+    <footer>
+      &copy; 2025 Cristian — Powered by GitHub Pages — MIT License
+    </footer>
+  </div>
 </body>
 </html>
