@@ -65,3 +65,41 @@ footer {
   color: #0f0;
   text-align: center;
 }
+
+/* === Cards (shared across all project pages) === */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  border: 2px solid #00ff00;
+  background-color: #000;
+  padding: 15px;
+  margin: 10px;
+  width: 220px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #00ff00;
+  box-shadow: 0 0 8px #00ff00;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #00ff00;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #00ff00;
+}
+
+.card p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
