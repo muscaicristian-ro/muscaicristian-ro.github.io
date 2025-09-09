@@ -10,16 +10,19 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 20px;
     }
 
     .card {
       border: 2px solid #00ff00;
-      background-color: #111;
+      background-color: #000; /* black background like terminal */
       padding: 15px;
       margin: 10px;
       width: 220px;
       text-align: center;
-      vertical-align: top;
+      font-family: "Courier New", Courier, monospace;
+      color: #00ff00;
+      box-shadow: 0 0 8px #00ff00; /* glowing effect */
     }
 
     .card img {
@@ -31,10 +34,13 @@
 
     .card h3 {
       margin: 5px 0;
+      font-size: 1.1em;
+      color: #00ff00;
     }
 
     .card p {
       font-size: 0.9em;
+      margin-bottom: 10px;
     }
 
     a {
@@ -47,7 +53,7 @@
     }
 
     .back-link {
-      margin-bottom: 20px;
+      margin: 10px 0 20px 0;
       display: block;
       font-weight: bold;
     }
@@ -71,18 +77,16 @@
         <img src="livecode_project1/screenshot.png" alt="Project screenshot">
         <h3>LiveCode Project 1</h3>
         <p>Interactive educational tool built with LiveCode.</p>
-        <a href="livecode_project1/">Open Project</a>
+        <a href="livecode_project1/">[ Open Project ]</a>
       </div>
 
-      <!-- Add more cards below -->
+      <!-- Example Card -->
       <div class="card">
         <img src="livecode_project2/screenshot.png" alt="Project screenshot">
         <h3>LiveCode Project 2</h3>
         <p>Small utility demonstrating GUI interactions.</p>
-        <a href="livecode_project2/">Open Project</a>
+        <a href="livecode_project2/">[ Open Project ]</a>
       </div>
-
-      <!-- Add your other LiveCode projects here -->
     </div>
 
     <footer>
