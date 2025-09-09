@@ -103,3 +103,14 @@ footer {
   font-size: 0.9em;
   margin-bottom: 10px;
 }
+
+/* Contact icons (make all same size and align with text) */
+.contact-icon {
+  display: inline-block;
+  width: 1.5em;       /* fixed width */
+  text-align: center;  /* center icon in its box */
+  font-size: 1.5em;    /* make them bigger */
+  vertical-align: middle;
+  margin-right: 0.5em; /* space between icon and text */
+}
+
