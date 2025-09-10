@@ -1,0 +1,5 @@
+One simple game made in LiveCode, you play against the PC. The PC player it plays quite ok. Good luck !
+Othello or Reversi game, the player plays against the PC
+
+Tags:	 #Classic Games, #LiveCode, #Game
+  
