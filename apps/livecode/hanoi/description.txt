@@ -1,0 +1,3 @@
+A small game made in Livecode, my first app built. Hope it is useful. Thank you
+Tags :Classic Games, #LiveCode, #Game, #Begginer
+•	11 August 2019
