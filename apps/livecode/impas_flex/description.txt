@@ -1,0 +1,3 @@
+A small game from the ZX Spectrum converted by me into Livecode stack. The user plays against the PC ! The user can move just UP by one or two squares and the PC moves only from left to Right the same one or two sqares , who can’t move anymore lost the game!  A nice game to play ! Have FUN ! 
+Tags:	 #Classic Games, #LiveCode, #Game
+•	15 August 2019
