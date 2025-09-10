@@ -45,11 +45,35 @@ html, body {
   margin-bottom: 20px;
 }
 
+/* -------------------------
+   Titles with retro CRT glow
+------------------------- */
 h1 {
   margin: 0 0 10px 0;
   font-size: 2em;
+  color: #ccffcc; /* brighter greenish-white */
+  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+  font-weight: bold;
 }
 
+h2 {
+  color: #ccffcc;
+  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+/* Card titles (lighter glow) */
+.card h3 {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #99ff99;
+  text-shadow: 0 0 3px #00ff00;
+}
+
+/* -------------------------
+   Lists and links
+------------------------- */
 ul {
   list-style-type: square;
 }
@@ -113,12 +137,6 @@ footer {
   border: 1px solid #00ff00;
   margin-bottom: 10px;
   background-color: #000;
-}
-
-/* Card title */
-.card h3 {
-  margin: 5px 0;
-  font-size: 1.1em;
 }
 
 /* Card description / body */
