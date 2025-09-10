@@ -81,27 +81,26 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* space between cards */
+  gap: 20px; /* spacing between cards */
 }
 
 .card {
   display: flex;
-  flex-direction: column; /* stack image, title, text, button */
-  justify-content: space-between; /* push button to bottom */
+  flex-direction: column;
   border: 2px solid #00ff00;
   background-color: #111;
   padding: 15px;
   width: 220px;
-  height: 350px; /* fixed card height for alignment */
   text-align: center;
 }
 
 .card img {
   width: 100%;
-  height: 120px; /* fixed image height */
-  object-fit: cover; /* crop images nicely if proportions differ */
+  height: 150px; /* all images same height */
+  object-fit: contain; /* resize to fit, no cropping */
   border: 1px solid #00ff00;
   margin-bottom: 10px;
+  background-color: #000; /* filler if image aspect ratio doesn’t fill */
 }
 
 .card h3 {
@@ -110,15 +109,17 @@ footer {
 }
 
 .card p {
-  flex-grow: 1; /* take available space but not push button away */
+  flex-grow: 1; /* text takes extra space but won’t overflow */
   font-size: 0.9em;
-  margin: 5px 0 15px 0;
+  margin: 5px 0 10px 0;
+  overflow-wrap: break-word; /* prevents text overflow */
 }
 
 .card a {
-  margin-top: auto; /* ensures button is always at bottom */
+  margin-top: auto;
   font-weight: bold;
   display: inline-block;
 }
+
 
 
