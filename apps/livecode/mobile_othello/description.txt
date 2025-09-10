@@ -1,0 +1,2 @@
+Mobile Reversi is a version for Android Phone of my Othello game.
+Othello or Reversi game, the player plays against the computer
