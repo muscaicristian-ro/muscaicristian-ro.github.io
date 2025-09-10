@@ -1,9 +1,13 @@
+/* -------------------------
+   Global / layout
+------------------------- */
 html, body {
   background-color: #000;
   color: #00ff00;
   font-family: "Courier New", Courier, monospace;
   margin: 0;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .window {
@@ -12,6 +16,7 @@ html, body {
   max-width: 800px;
   margin: 30px auto;
   background-color: #111;
+  box-sizing: border-box;
 }
 
 .menu {
@@ -65,7 +70,9 @@ footer {
   text-align: center;
 }
 
-/* Contact icons (make all same size and align with text) */
+/* -------------------------
+   Contact icons
+------------------------- */
 .contact-icon {
   display: inline-block;
   width: 1.5em;
@@ -75,9 +82,11 @@ footer {
   margin-right: 0.5em;
 }
 
-/* === Cards (shared across all project pages) === */
+/* -------------------------
+   Cards layout
+------------------------- */
 .cards-container {
-  display: grid; /* use grid for better alignment */
+  display: grid; /* use grid for neat alignment */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 12px;
@@ -93,37 +102,47 @@ footer {
   text-align: center;
   color: #00ff00;
   box-sizing: border-box;
-  min-height: 280px; /* base height, grows if text longer */
+  min-height: 280px; /* base height; cards grow if needed */
 }
 
+/* Image inside card */
 .card img {
   width: 100%;
-  height: 150px; /* fixed visible image height */
-  object-fit: contain; /* scale image, no cropping */
+  height: 150px;         /* all images same height */
+  object-fit: contain;   /* scale image to fit, no cropping */
   border: 1px solid #00ff00;
   margin-bottom: 10px;
   background-color: #000;
 }
 
+/* Card title */
 .card h3 {
   margin: 5px 0;
   font-size: 1.1em;
 }
 
-/* Body section to grow if needed */
+/* Card description / body */
+.card .card-body {
+  flex: 1 1 auto;        /* expands to fill card, pushes footer down */
+  text-align: left;
+}
+
 .card .card-body p {
-  margin: 0 0 8px 0;   /* bottom margin added for spacing between paragraphs */
+  margin: 0 0 10px 0;    /* bottom spacing between paragraphs */
   font-size: 0.9em;
-  line-height: 1.3;
+  line-height: 1.4;      /* better readability */
   overflow-wrap: break-word;
   text-align: justify;
 }
 
+.card .card-body p:last-child {
+  margin-bottom: 0;      /* no extra space after last paragraph */
+}
 
-/* Footer (download button pinned at bottom) */
+/* Card footer (download button) */
 .card .card-footer {
+  margin-top: 12px;      /* space between description and button */
   text-align: center;
-  margin-top: auto;
 }
 
 .card .card-footer a {
@@ -136,5 +155,13 @@ footer {
 }
 
 .card .card-footer a:hover {
-  background-color: rgba(0,255,0,0.05);
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+/* -------------------------
+   Responsive adjustments
+------------------------- */
+@media (max-width: 480px) {
+  .card img { height: 110px; }
+  .card { min-height: 240px; padding: 10px; }
 }
