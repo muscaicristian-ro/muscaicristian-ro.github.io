@@ -111,11 +111,14 @@ footer {
 }
 
 /* Body section to grow if needed */
-.card .card-body {
-  flex: 1 1 auto; /* expands to fill card, keeps footer at bottom */
-  text-align: left;
-  margin-bottom: 10px;
+.card .card-body p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.3;
+  overflow-wrap: break-word; /* prevent overflow */
+  text-align: justify;        /* added: justify text */
 }
+
 
 .card .card-body p {
   margin: 0;
