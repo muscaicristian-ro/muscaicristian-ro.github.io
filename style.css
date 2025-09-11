@@ -1,34 +1,83 @@
-/* -------------------------
-   Global / layout
-------------------------- */
-html, body {
-  background-color: #000;
-  color: #00ff00;
+/* =========================================================
+   Cristian's Retro Theme — Global Stylesheet
+   Organized for readability & easy maintenance
+   ---------------------------------------------------------
+   TABLE OF CONTENTS
+   01) Theme Variables
+   02) Reset & Base
+   03) Layout Containers
+   04) Navigation (Menu)
+   05) Typography (Headings, Lists, Links)
+   06) Content Sections (.section-content) — index/overview
+   07) Cards (LiveCode pages)
+   08) Footer
+   09) Utilities & States
+   10) Responsive
+   ========================================================= */
+
+/* =========================================================
+   01) THEME VARIABLES
+   ========================================================= */
+:root {
+  --bg: #000;
+  --pane: #111;
+  --green: #00ff00;
+  --green-bright: #ccffcc; /* headings */
+  --green-mid: #99ff99;     /* card titles */
+  --green-dim: #0f0;        /* footer text */
+  --border: #00ff00;
+}
+
+/* =========================================================
+   02) RESET & BASE
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--green);
   font-family: "Courier New", Courier, monospace;
   margin: 0;
   padding: 20px;
-  box-sizing: border-box;
 }
 
+/* =========================================================
+   03) LAYOUT CONTAINERS
+   ========================================================= */
 .window {
-  border: 2px solid #00ff00;
+  border: 2px solid var(--border);
   padding: 20px;
   max-width: 800px;
   margin: 30px auto;
-  background-color: #111;
-  box-sizing: border-box;
+  background-color: var(--pane);
 }
 
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   04) NAVIGATION (MENU)
+   ========================================================= */
 .menu {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid #00ff00;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
 
 .menu a {
-  color: #00ff00;
+  color: var(--green);
   text-decoration: none;
   font-weight: bold;
 }
@@ -37,49 +86,42 @@ html, body {
   text-decoration: underline;
 }
 
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  border: 2px solid #00ff00;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
+/* =========================================================
+   05) TYPOGRAPHY (HEADINGS, LISTS, LINKS)
+   ========================================================= */
 
-/* -------------------------
-   Titles with retro CRT glow
-------------------------- */
+/* Titles with retro CRT glow */
 h1 {
   margin: 0 0 10px 0;
   font-size: 2em;
-  color: #ccffcc; /* brighter greenish-white */
-  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+  color: var(--green-bright);
+  text-shadow: 0 0 4px var(--green), 0 0 8px var(--green);
   font-weight: bold;
 }
 
 h2 {
-  color: #ccffcc;
-  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+  color: var(--green-bright);
+  text-shadow: 0 0 4px var(--green), 0 0 8px var(--green);
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 25px; /* base spacing; tightened inside .section-content below */
 }
 
 /* Card titles (lighter glow) */
 .card h3 {
   margin: 5px 0;
   font-size: 1.1em;
-  color: #99ff99;
-  text-shadow: 0 0 3px #00ff00;
+  color: var(--green-mid);
+  text-shadow: 0 0 3px var(--green);
 }
 
-/* -------------------------
-   Lists and links
-------------------------- */
+/* Lists & links (global) */
 ul {
   list-style-type: square;
+  padding-left: 1.2em; /* base list padding; overridden in .section-content */
 }
 
 a {
-  color: #00ff00;
+  color: var(--green);
   text-decoration: none;
 }
 
@@ -87,28 +129,49 @@ a:hover {
   text-decoration: underline;
 }
 
-footer {
-  margin-top: 40px;
-  font-size: 0.8em;
-  color: #0f0;
-  text-align: center; /* keep centered footer */
+/* =========================================================
+   06) CONTENT SECTIONS — index/overview (.section-content)
+   (Justified paragraphs with first-line indent and tight spacing)
+   ========================================================= */
+
+/* Make H2s clickable but styled like headings */
+.section-content h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+.section-content h2 a:hover {
+  text-decoration: underline;
 }
 
-/* -------------------------
-   Contact icons
-------------------------- */
-.contact-icon {
-  display: inline-block;
-  width: 1.5em;
-  text-align: center;
-  font-size: 1.5em;
-  vertical-align: middle;
-  margin-right: 0.5em;
+/* Tighter spacing for titles within content areas */
+.section-content h2 {
+  margin: 14px 0 6px; /* top | horiz | bottom */
 }
 
-/* -------------------------
-   Cards layout
-------------------------- */
+/* Paragraphs in overview areas (not card bodies) */
+.section-content > p,
+.window > p {
+  margin: 0 0 8px 20px;     /* left offset + small bottom gap */
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  text-indent: 1.25em;      /* first-line indent */
+}
+
+/* Lists beneath headings: align with paragraphs, not justified */
+.section-content > ul {
+  margin: 4px 0 0 20px;
+  padding-left: 20px;       /* keep bullets aligned nicely */
+}
+.section-content > ul li {
+  margin: 0 0 4px 0;
+  text-align: left;
+}
+
+/* =========================================================
+   07) CARDS (LiveCode pages) — unchanged formatting
+   ========================================================= */
 .cards-container {
   display: grid; /* use grid for neat alignment */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -120,26 +183,23 @@ footer {
 .card {
   display: flex;
   flex-direction: column;
-  border: 2px solid #00ff00;
-  background-color: #111;
+  border: 2px solid var(--border);
+  background-color: var(--pane);
   padding: 15px;
   text-align: center;
-  color: #00ff00;
-  box-sizing: border-box;
+  color: var(--green);
   min-height: 280px; /* base height; cards grow if needed */
 }
 
-/* Image inside card */
 .card img {
   width: 100%;
   height: 150px;         /* all images same height */
   object-fit: contain;   /* scale image to fit, no cropping */
-  border: 1px solid #00ff00;
+  border: 1px solid var(--border);
   margin-bottom: 10px;
-  background-color: #000;
+  background-color: var(--bg);
 }
 
-/* Card description / body */
 .card .card-body {
   flex: 1 1 auto;        /* expands to fill card, pushes footer down */
   text-align: left;
@@ -157,7 +217,6 @@ footer {
   margin-bottom: 0;      /* no extra space after last paragraph */
 }
 
-/* Card footer (download button) */
 .card .card-footer {
   margin-top: 12px;      /* space between description and button */
   text-align: center;
@@ -166,22 +225,38 @@ footer {
 .card .card-footer a {
   display: inline-block;
   font-weight: bold;
-  border: 1px solid #00ff00;
+  border: 1px solid var(--border);
   padding: 5px 10px;
   text-decoration: none;
-  color: #00ff00;
+  color: var(--green);
 }
 
 .card .card-footer a:hover {
   background-color: rgba(0, 255, 0, 0.05);
 }
 
-/* -------------------------
-   Responsive adjustments
-------------------------- */
-@media (max-width: 480px) {
-  .card img { height: 110px; }
-  .card { min-height: 240px; padding: 10px; }
+/* =========================================================
+   08) FOOTER
+   ========================================================= */
+footer {
+  margin-top: 40px;
+  font-size: 0.8em;
+  color: var(--green-dim);
+  text-align: center; /* keep centered footer */
+}
+
+/* =========================================================
+   09) UTILITIES & STATES
+   ========================================================= */
+
+/* Contact icons */
+.contact-icon {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.5em;
 }
 
 /* Highlight current page in the menu */
@@ -202,41 +277,16 @@ footer {
   outline: none;
 }
 
-/* -------------------------
-   Index & overview paragraphs (not cards)
-   (Clean justification + real first-line indent)
-------------------------- */
-.section-content > p,
-.window > p {
-  margin: 0 0 12px 20px;   /* align block with a left offset */
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  line-height: 1.5;
-  text-indent: 1.25em;     /* first-line indent */
-}
-
-/* Lists under section headings: align with paragraphs, no justification */
-.section-content > ul {
-  margin: 0 0 0 20px;
-  padding-left: 20px;
-}
-.section-content > ul li {
-  margin: 0 0 6px 0;
-  text-align: left;
-}
-
-/* H2s are links; keep them clean */
-.section-content h2 a {
-  text-decoration: none;
-  color: inherit;
-}
-.section-content h2 a:hover {
-  text-decoration: underline;
-}
-
-/* Keep nav + headings left aligned */
+/* Ensure nav + headings are not justified */
 .menu,
 h1, h2, h3, h4, h5, h6 {
   text-align: left;
+}
+
+/* =========================================================
+   10) RESPONSIVE
+   ========================================================= */
+@media (max-width: 480px) {
+  .card img { height: 110px; }
+  .card { min-height: 240px; padding: 10px; }
 }
