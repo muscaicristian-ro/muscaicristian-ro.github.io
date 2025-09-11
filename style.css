@@ -169,6 +169,31 @@ a:hover {
   text-align: left;
 }
 
+/* Emphasized legacy language list */
+.section-content .legacy-list {
+  margin: 6px 0 0 20px;   /* aligns with paragraphs, slightly tighter */
+  padding-left: 20px;
+}
+
+.section-content .legacy-list li {
+  margin: 0 0 6px 0;
+  text-align: left;       /* avoid justification weirdness */
+}
+
+.section-content .legacy-list a {
+  font-size: 1.15em;      /* bigger */
+  font-weight: 700;       /* bolder for visibility */
+  color: var(--green-bright);               /* lighter */
+  text-shadow: 0 0 4px var(--green);        /* subtle glow to match theme */
+  letter-spacing: 0.02em; /* tiny spacing for clarity */
+}
+
+.section-content .legacy-list a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 6px var(--green);
+}
+
+
 /* =========================================================
    07) CARDS (LiveCode pages) — unchanged formatting
    ========================================================= */
