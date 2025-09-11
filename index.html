@@ -6,16 +6,20 @@
     <title>Cristian's Retro Projects</title>
     <link rel="stylesheet" href="style.css">
     <style>
-      /* Indent only descriptions and links, not titles */
+      /* Indent only descriptions and lists, not titles */
       .section-content p,
       .section-content ul {
         margin-left: 20px;
-        /* indent for paragraphs and lists */
       }
-
       .section-content ul {
         padding-left: 20px;
-        /* extra padding so bullets line up nicely */
+      }
+      /* Optional: make the whole H2 text clickable without extra underline clutter */
+      .section-content h2 a {
+        text-decoration: none;
+      }
+      .section-content h2 a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -24,15 +28,6 @@
       <div class="menu">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
-
-        <!-- Moved links from content into the menu -->
-        <a href="livecode.html">LiveCode</a>
-        <a href="under-construction.html">VB.NET</a>
-        <a href="under-construction.html">Visual Basic Classic</a>
-        <a href="under-construction.html">QBasic</a>
-        <a href="under-construction.html">Turbo Pascal</a>
-        <a href="under-construction.html">FoxPro</a>
-
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -43,21 +38,25 @@
 
       <!-- Projects Overview Section -->
       <div class="section-content">
-        <h2>LiveCode</h2>
-        <p>Click to explore all LiveCode projects with screenshots and descriptions.</p>
+        <!-- LiveCode: move link from paragraph to H2 -->
+        <h2><a href="livecode.html">LiveCode</a></h2>
+        <p>Explore all LiveCode projects with screenshots and descriptions.</p>
 
-        <h2>VB.NET</h2>
+        <!-- VB.NET: move link from paragraph to H2 -->
+        <h2><a href="under-construction.html">VB.NET</a></h2>
         <p>Classic and modern VB.NET projects, examples, and utilities.</p>
 
-        <h2>Visual Basic Classic</h2>
+        <!-- Visual Basic Classic: move link from paragraph to H2 -->
+        <h2><a href="under-construction.html">Visual Basic Classic</a></h2>
         <p>Legacy VB6 programs preserved for learning and experimentation.</p>
 
+        <!-- Legacy / Early Projects: header stays plain, list items still link out -->
         <h2>Legacy / Early Projects</h2>
         <p>My early coding projects including QBasic, Turbo Pascal, and FoxPro programs from DOS-era experiments and learning days.</p>
         <ul>
-          <li>QBasic</li>
-          <li>Turbo Pascal</li>
-          <li>FoxPro</li>
+          <li><a href="under-construction.html">QBasic</a></li>
+          <li><a href="under-construction.html">Turbo Pascal</a></li>
+          <li><a href="under-construction.html">FoxPro</a></li>
         </ul>
       </div>
 
