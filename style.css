@@ -315,3 +315,32 @@ h1, h2, h3, h4, h5, h6 {
   .card img { height: 110px; }
   .card { min-height: 240px; padding: 10px; }
 }
+
+/* Emphasize the legacy language links (works with or without .legacy-list) */
+.section-content ul.legacy-list li a,
+.section-content > ul li a {
+  font-size: 1.2em;          /* bigger */
+  font-weight: 800;          /* bolder */
+  color: var(--green-bright); /* lighter */
+  text-shadow: 0 0 4px var(--green);
+  letter-spacing: 0.02em;
+}
+
+/* Make the bullets a bit larger/lighter too */
+.section-content ul.legacy-list li::marker,
+.section-content > ul li::marker {
+  font-size: 1.2em;
+  color: var(--green-bright);
+}
+
+/* Keep spacing tidy */
+.section-content > ul { margin: 6px 0 0 20px; padding-left: 20px; }
+.section-content > ul li { margin: 0 0 6px 0; text-align: left; }
+
+/* Hover polish */
+.section-content ul.legacy-list li a:hover,
+.section-content > ul li a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 6px var(--green);
+}
+
