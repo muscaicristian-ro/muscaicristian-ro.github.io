@@ -183,3 +183,21 @@ footer {
   .card img { height: 110px; }
   .card { min-height: 240px; padding: 10px; }
 }
+
+/* Highlight current page in the menu */
+.menu a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Make card titles-as-links feel like headings but clickable */
+.card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.card h3 a:hover,
+.card h3 a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  outline: none;
+}
