@@ -201,3 +201,39 @@ footer {
   text-underline-offset: 0.2em;
   outline: none;
 }
+
+/* === Moved from index.html === */
+.section-content p,
+.section-content ul {
+  margin-left: 20px;
+}
+
+.section-content ul {
+  padding-left: 20px;
+}
+
+/* H2s are links; keep H2 styling */
+.section-content h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+.section-content h2 a:hover {
+  text-decoration: underline;
+}
+
+/* === Global justification for body copy === */
+.section-content p,
+.section-content li,
+footer,
+.window > p {
+  text-align: justify;
+  hyphens: auto;           /* nicer spacing; uses <html lang="en"> */
+  text-justify: inter-word;
+}
+
+/* Keep nav + headings not justified */
+.menu,
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
+
