@@ -270,6 +270,7 @@ footer {
   text-align: center; /* keep centered footer */
 }
 
+.version-badge { font-weight: 700; }
 /* =========================================================
    09) UTILITIES & STATES
    ========================================================= */
